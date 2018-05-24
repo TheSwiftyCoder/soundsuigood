@@ -13,13 +13,18 @@ body {
 }
 
 .container {
-  max-width: 100% !important;
   overflow: hidden;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+.row {
+  max-width: 1680px !important;
+  margin: 0 auto;
 }
 
 .top {
-  background: linear-gradient(#FAD401, #FFC510);
-  height: 100vh;
+  background: linear-gradient(#FFD900, #FFC510);
+  height: 100%;
 }
 
 .header {
@@ -29,7 +34,7 @@ body {
 
 @media screen and (min-width: 769px) {
   .header {
-    padding: 5% 0 0 7%;
+    padding: 5% 0 0 3%;
   }
 }
 
@@ -49,16 +54,21 @@ body {
 }
 
 .sound img {
-  width: 40px;
-  margin-top: -30px;
+  margin-top: -20px;
   padding-bottom: 15px;
+  margin-left: 5px;
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 120px;
   font-weight: 800;
   margin-bottom: 5%;
   margin-top: -20px;
+}
+@media screen and (min-width: 1281px) {
+  h1 {
+    font-size: 140px;
+  }
 }
 
 .info1 {
@@ -112,7 +122,7 @@ h1 {
 
 .synth {
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 250px;
 }
 
@@ -128,50 +138,34 @@ h1 {
 }
 
 .buybtn {
-  margin-top: -15px;
+  margin-top: -5px;
 }
 
 .button {
-  border: 1px solid #000000;
-  background: #000000;
-  /* background: -webkit-gradient(linear, left top, left bottom, from(#49494a), to(#000000));
-   background: -webkit-linear-gradient(top, #49494a, #000000);
-   background: -moz-linear-gradient(top, #49494a, #000000);
-   background: -ms-linear-gradient(top, #49494a, #000000);
-   background: -o-linear-gradient(top, #49494a, #000000);
-   background-image: -ms-linear-gradient(top, #49494a 0%, #000000 100%);*/
-  padding: 10px 20px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  border: 2px solid #1c1c1c;
+  background: #1c1c1c;
+  padding: 14px 20px;
   -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
   -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
   box-shadow: rgba(255, 255, 255, 0.4) 0 0px 0, inset rgba(255, 255, 255, 0.4) 0 0px 0;
-  text-shadow: #1e1f1f 0 1px 0;
   color: #ffffff;
   font-size: 14px;
   text-decoration: none;
   vertical-align: middle;
-  font-weight: 200;
+  font-weight: 400;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .button:hover {
-  border: 1px solid #000000;
-  text-shadow: #121212 0 1px 0;
-  background: #000000;
-  /* background: -webkit-gradient(linear, left top, left bottom, from(#49494a), to(#000000));
-   background: -webkit-linear-gradient(top, #49494a, #000000);
-   background: -moz-linear-gradient(top, #49494a, #000000);
-   background: -ms-linear-gradient(top, #49494a, #000000);
-   background: -o-linear-gradient(top, #49494a, #000000);
-   background-image: -ms-linear-gradient(top, #49494a 0%, #000000 100%);*/
-  color: #fff;
+  border: 2px solid #1c1c1c;
+  background: transparent;
+  color: #1c1c1c;
   text-decoration: none;
 }
 
 .button:active {
-  text-shadow: #000000 0 1px 0;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   background: #ffffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#000000));
   background: -webkit-linear-gradient(top, #ffffff, #ffffff);
@@ -211,12 +205,14 @@ h1 {
 }
 
 .licensetxt {
+  position: relative;
   margin: auto;
   text-align: left;
   margin-top: 45px;
   font-weight: 200;
   color: #585b5e;
   padding-top: 20px;
+  min-height: 800px;
 }
 
 h2 {
@@ -224,30 +220,29 @@ h2 {
 }
 
 .btnx {
-  border: none;
+  display: none;
+  cursor: pointer;
   position: absolute;
   width: 46px;
   height: 46px;
   right: 20px;
   top: 30px;
-  background-color: black;
-  border-radius: 20%;
+  background-color: #1c1c1c;
   margin: auto;
   padding: 10px;
+  z-index: 10006;
 }
 
 .btnx:hover {
   background-color: #585b5e;
 }
 
-.btnx img {
-  display: block;
-  margin: 0 auto;
+.btnx i {
+  color: #fff;
+  font-size: 26px;
 }
-
 .sound2 img {
   width: 50px;
   display: block;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: 50px auto;
 }

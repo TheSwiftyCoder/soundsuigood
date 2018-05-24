@@ -1,6 +1,13 @@
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
+$(document).ready(function () {
+    "use strict";
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 150)
+            $('.btnx').fadeIn('slow');
+        else
+            $('.btnx').fadeOut('slow');
+    });
+    $(document).on('click', '.btnx', function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
 });
