@@ -6,6 +6,10 @@ $(document).ready(function () {
         else
             $('.btnx').fadeOut('slow');
     });
+    $(document).on('click', '.jump', function () {
+        $('html, body').animate({ scrollTop: 900 }, 800);
+        return false;
+    });
     $(document).on('click', '.btnx', function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
